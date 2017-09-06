@@ -1,0 +1,19 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "pulp test",
+    "build": "pulp build -o node_modules",
+    "package": "rm -f lambda.zip && zip -r lambda * && cp lambda.zip ~/Desktop",
+    "deploy": "pulp build -o node_modules && rm -f lambda.zip && zip -r lambda * && aws lambda update-function-code --function-name hello-purs --zip-file fileb://lambda.zip"
+  },
+  "author": "Logan Mac",
+  "license": "MIT"
+}
