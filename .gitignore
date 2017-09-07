@@ -4,3 +4,4 @@
 /.psci*
 /src/.webpack.js
 .psc-ide-port
+*.zip
